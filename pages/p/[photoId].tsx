@@ -1,3 +1,4 @@
+'use client';
 import type {GetStaticProps, NextPage} from 'next'
 import Head from 'next/head'
 import {useRouter} from 'next/router'
@@ -7,6 +8,7 @@ import cloudinary from '../../utils/cloudinary'
 import getBase64ImageUrl from '../../utils/generateBlurPlaceholder'
 import type {ImageProps} from '../../utils/types'
 import fetchCloudinaryFolders from "../../utils/cloudinaryFolders";
+
 
 const Home: NextPage = ({currentPhoto}: { currentPhoto: ImageProps }) => {
     const router = useRouter()
