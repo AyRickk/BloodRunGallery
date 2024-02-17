@@ -37,8 +37,13 @@ export default Home
 export const getStaticProps: GetStaticProps = async (context) => {
     const {year, photoId} = context.params;
 
-    // Now 'year' is the specific year for this page
-    // You can use it in your Cloudinary search expression
+    // Assurez-vous que les valeurs nécessaires sont présentes
+    if (!year || !photoId) {
+        return {
+            notFound: true,
+        };
+    }
+
     const results = await cloudinary.v2.search
         .expression(`folder:${process.env.CLOUDINARY_FOLDER}/${year}/*`)
         .sort_by('public_id', 'desc')
@@ -74,14 +79,23 @@ export const getStaticProps: GetStaticProps = async (context) => {
     const currentPhoto = reducedResults.find(
         (img) => img.id === Number(photoId)
     )
-    if (currentPhoto) {
-        currentPhoto.blurDataUrl = await getBase64ImageUrl(currentPhoto);
+
+    // Si currentPhoto est undefined, retournez null pour currentPhoto dans props
+    if (!currentPhoto) {
+        return {
+            props: {
+                currentPhoto: null, // Utilisez null au lieu de undefined
+            },
+        };
     }
+
+    currentPhoto.blurDataUrl = await getBase64ImageUrl(currentPhoto);
 
     return {
         props: {
             currentPhoto: currentPhoto,
         },
+        revalidate: 60, // Optionnel: ajoutez ceci si vous voulez ISR (Incremental Static Regeneration)
     }
 }
 
