@@ -17,18 +17,24 @@ const YearSelection: NextPage = ({years}: { years: { year: string, firstImage: a
             <title>Galerie Photo Bloodrun</title>
         </Head>
             <div className="hero min-h-screen bg-base-200">
-                <div className="hero-content flex-col lg:flex-row">
+                <div className="hero-content flex-col lg:flex-row break-words p-4 lg:p-0">
                     <Image src="/Logo_NoText.svg"
                            alt="Blood Run Galerie"
-                           width={540}
-                           height={540}
+                           width={500}
+                           height={500}
                            quality={100}
-                           className="max-w-lg rounded-lg drop-shadow-xl"/>
+                           className="max-w-xs lg:max-w-lg mx-auto rounded-lg drop-shadow-xl"/>
                     <div>
-                        <h1 className="text-5xl font-bold">Galerie Blood Run</h1>
-                        <p className="py-6">Retrouvez ici les photos des différentes éditions de la Blood Run !</p>
-                        <a href="#yearSelection"
-                           className="btn btn-primary bg-red-800 hover:bg-red-900 border-0 hover:border-0 text-neutral-300">Commencer</a>
+                        <div className="text-center lg:text-left">
+                            <h1 className="text-5xl font-bold">Galerie Blood Run</h1>
+                            <p className="py-6">Retrouvez ici les photos des différentes éditions de la Blood Run !</p>
+                            <div className="flex justify-center lg:justify-start">
+                                <a href="#yearSelection"
+                                   className="btn btn-primary bg-red-800 hover:bg-red-900 border-0 hover:border-0 text-neutral-300">
+                                    Commencer
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -38,7 +44,7 @@ const YearSelection: NextPage = ({years}: { years: { year: string, firstImage: a
                 {years.map(({year, firstImage, count}) => (
                     firstImage ? (
                         <div key={year}
-                             className="card w-96 bg-base-100 shadow-xl m-2 flex-auto max-w-[calc(33%-1rem)] h-1/2">
+                             className="card w-96 lg:w-1/3 bg-base-100 shadow-xl m-2 h-1/2 ">
                             <figure className="w-full h-64 relative">
                                 <Image
                                     src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/${firstImage.public_id}.${firstImage.format}`}
@@ -61,7 +67,8 @@ const YearSelection: NextPage = ({years}: { years: { year: string, firstImage: a
                         </div>
                     ) : null
                 ))}
-                <h2 className="w-full text-3xl font-bold mt-8 text-center">Les années précédentes arriveront bientôt !</h2>
+                <h2 className="w-full text-3xl font-bold mt-8 text-center">Les années précédentes arriveront bientôt
+                    !</h2>
             </div>
 
             <footer className="footer p-10 bg-neutral text-neutral-300">
