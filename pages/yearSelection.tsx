@@ -30,7 +30,7 @@ const YearSelection: NextPage = ({years}: { years: { year: string, firstImage: a
                             <p className="py-6">Retrouvez ici les photos des différentes éditions de la Blood Run !</p>
                             <div className="flex justify-center lg:justify-start">
                                 <a href="#yearSelection"
-                                   className="btn btn-primary bg-red-800 focus:bg-red-900 focus:border-0 hover:bg-red-900 border-0 hover:border-0 text-neutral-300">
+                                   className="btn btn-primary bg-red-800 focus:bg-red-900 focus:border-0 hover:bg-red-900 border-0 hover:border-0 text-neutral-300 focus:outline-none focus:ring-0 active:bg-red-900">
                                     Commencer
                                 </a>
                             </div>
