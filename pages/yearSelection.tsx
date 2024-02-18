@@ -30,7 +30,7 @@ const YearSelection: NextPage = ({years}: { years: { year: string, firstImage: a
                             <p className="py-6">Retrouvez ici les photos des différentes éditions de la Blood Run !</p>
                             <div className="flex justify-center lg:justify-start">
                                 <a href="#yearSelection"
-                                   className="btn btn-primary bg-red-800 hover:bg-red-900 border-0 hover:border-0 text-neutral-300">
+                                   className="btn btn-primary bg-red-800 focus:bg-red-900 focus:border-0 hover:bg-red-900 border-0 hover:border-0 text-neutral-300">
                                     Commencer
                                 </a>
                             </div>
@@ -58,7 +58,7 @@ const YearSelection: NextPage = ({years}: { years: { year: string, firstImage: a
                                 <p>{count} images disponibles</p>
                                 <div className="card-actions justify-end">
                                     <Link href={`/?year=${year}`}
-                                          className="btn btn-primary bg-red-800 hover:bg-red-900 border-0 hover:border-0 text-neutral-300"
+                                          className="btn btn-primary bg-red-800 hover:bg-red-900 border-0 hover:border-0 focus:bg-red-900 focus:border-0 text-neutral-300"
                                           onClick={() => handleClick(year)}>
                                         Voir les photos
                                     </Link>
