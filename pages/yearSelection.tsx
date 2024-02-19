@@ -71,7 +71,7 @@ const YearSelection: NextPage = ({years}: { years: { year: string, firstImage: a
                     !</h2>
             </div>
 
-            <footer className="footer p-10 bg-neutral text-neutral-300">
+            <footer className="footer p-10 bg-base-200">
                 <aside>
                     <Image src={"/Logo_DDNLVDG.png"}
                            alt={"Logo Donneurs du sang de la Vallée du Gapeau"}

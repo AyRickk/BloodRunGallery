@@ -48,7 +48,7 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
           )}
           <div className="columns-1 gap-4 sm:columns-2 xl:columns-3 2xl:columns-4">
             <div
-                className="after:content relative mb-5 flex h-[629px] flex-col items-center justify-end gap-4 overflow-hidden rounded-lg bg-white/10 px-6 pb-16 pt-64 text-center text-white shadow-highlight after:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:shadow-highlight lg:pt-0">
+                className="after:content relative mb-5 flex h-[629px] flex-col items-center justify-end gap-4 overflow-hidden rounded-lg bg-white/10 px-6 pb-16 pt-64 text-center shadow-highlight after:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:shadow-highlight lg:pt-0">
               <div className="absolute inset-0 flex items-center justify-center opacity-20">
               <span className="flex max-h-full max-w-full items-center justify-center">
               </span>
@@ -64,7 +64,7 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
               <h1 className="mt-8 mb-4 text-2xl font-bold uppercase tracking-widest">
                 Blood Run {year}
               </h1>
-              <p className="max-w-[40ch] text-white/75 sm:max-w-[32ch]">
+              <p className="max-w-[40ch] sm:max-w-[32ch]">
                 Voici les photos de la Blood Run {year} ! Retrouvez ici les photos des différentes éditions de la Blood
                 Run !
               </p>
@@ -122,7 +122,7 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
             })}
           </div>
         </main>
-        <footer className="footer p-10 bg-neutral text-neutral-300">
+        <footer className="footer p-10 bg-base-200">
           <aside>
             <Image src={"/Logo_DDNLVDG.png"}
                    alt={"Logo Donneurs du sang de la Vallée du Gapeau"}
