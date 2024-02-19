@@ -9,7 +9,6 @@ import cloudinary from '../utils/cloudinary'
 import getBase64ImageUrl from '../utils/generateBlurPlaceholder'
 import type { ImageProps } from '../utils/types'
 import { useLastViewedPhoto } from '../utils/useLastViewedPhoto'
-import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
   const router = useRouter()
@@ -167,7 +166,6 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
               <span className="loading loading-spinner loading-lg"></span>
             </div>
         )}
-        <SpeedInsights />
       </>
   )
 }
