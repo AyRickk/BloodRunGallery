@@ -4,7 +4,6 @@ import cloudinary from "../utils/cloudinary";
 import {NextPage} from "next";
 import Head from "next/head";
 import {useState} from "react";
-import {white} from "next/dist/lib/picocolors";
 
 const YearSelection: NextPage = ({years}: { years: { year: string, firstImage: any, count: number }[] }) => {
     const [isLoading, setIsLoading] = useState(false);
@@ -124,6 +123,7 @@ const YearSelection: NextPage = ({years}: { years: { year: string, firstImage: a
                     <span className="loading loading-spinner loading-lg"></span>
                 </div>
             )}
+
         </>
     )
 }
