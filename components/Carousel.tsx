@@ -19,11 +19,11 @@ export default function Carousel({
 
     function closeModal() {
         setLastViewedPhoto(currentPhoto.id)
-        router.push(`/?year=${year}`, undefined, { shallow: true })
+        router.push(`/?year=${year}`, undefined, {shallow: true})
     }
 
     function changePhotoId(newVal: number) {
-        return newVal
+        router.push(`/?photoId=${newVal}&year=${year}`, `/p/${newVal}?year=${year}`, {shallow: true})
     }
 
     useKeypress('Escape', () => {

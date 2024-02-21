@@ -29,20 +29,20 @@ export default function Modal({
   }
 
   function changePhotoId(newVal: number) {
-    if (newVal > index) {
-      setDirection(1)
-    } else {
-      setDirection(-1)
-    }
-    setCurIndex(newVal)
-    router.push(
-      {
-        query: { photoId: newVal },
-      },
-      `/p/${newVal}?year=${year}`,
-      { shallow: true }
-    )
+  if (newVal > index) {
+    setDirection(1)
+  } else {
+    setDirection(-1)
   }
+  setCurIndex(newVal)
+  router.push(
+    {
+      query: { photoId: newVal, year: year },
+    },
+    `/p/${newVal}?year=${year}`,
+    { shallow: true }
+  )
+}
 
   useKeypress('ArrowRight', () => {
     if (index + 1 < images.length) {
