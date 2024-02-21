@@ -24,7 +24,7 @@ export default function Modal({
   const [curIndex, setCurIndex] = useState(index)
 
   function handleClose() {
-    router.push(`/`, undefined, { shallow: true })
+    router.push(`/?year=${year}`, undefined, { shallow: true })
     onClose()
   }
 
@@ -39,7 +39,7 @@ export default function Modal({
       {
         query: { photoId: newVal },
       },
-      `/p/${newVal}`,
+      `/p/${newVal}?year=${year}`,
       { shallow: true }
     )
   }

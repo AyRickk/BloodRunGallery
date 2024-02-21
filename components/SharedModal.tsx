@@ -99,7 +99,7 @@ export default function SharedModal({
                                         width={navigation ? 1280 : 1920}
                                         height={navigation ? 853 : 1280}
                                         priority
-                                        alt="Next.js Conf image"
+                                        alt="Blood run image"
                                         onLoad={() => setLoaded(true)}
                                     />
                                 )}
