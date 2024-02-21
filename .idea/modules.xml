@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/BloodRun-Gallery.iml" filepath="$PROJECT_DIR$/.idea/BloodRun-Gallery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../BloodRun-Gallery/.idea/BloodRun-Gallery.iml" filepath="$PROJECT_DIR$/../BloodRun-Gallery/.idea/BloodRun-Gallery.iml" />
     </modules>
   </component>
 </project>
