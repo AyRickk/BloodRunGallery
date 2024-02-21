@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/nextjs-image-gallery.iml" filepath="$PROJECT_DIR$/.idea/nextjs-image-gallery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/BloodRun-Gallery.iml" filepath="$PROJECT_DIR$/.idea/BloodRun-Gallery.iml" />
     </modules>
   </component>
 </project>
